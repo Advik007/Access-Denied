@@ -14,7 +14,7 @@ Our GUI (Graphic User Inferface) is user-friendly and does not require any techn
 
 This is how our Main GUI looks like. The IP Address has been blackened out for safety reasons.
 
-![Our Alert Screen when an Attack has been detected](https://github.com/Advik007/Access-Denied/blob/master/Main%20GUI.png)
+![Our Alert Screen when an Attack has been detected](https://github.com/Advik007/Access-Denied/blob/master/Alert%20Sign.jpg)
 
 The Alert Screen is shown when an attack has been detected by our Java program.
 
