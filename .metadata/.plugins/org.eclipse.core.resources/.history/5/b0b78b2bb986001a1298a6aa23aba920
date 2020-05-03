@@ -1,0 +1,92 @@
+package accessdeniedsoftwre;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JMenuBar;
+
+public class MainScreen extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					MainScreen frame = new MainScreen();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public MainScreen() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 771, 485);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		contentPane = new JPanel();
+		contentPane.setBackground(Color.YELLOW);
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+	
+	
+		Runtime rt=Runtime.getRuntime();
+		String CMDCommands="C:/Users/Jasvith/Desktop/InterfacesList.txt";
+		
+		try {
+			rt.exec(new String[] {"cmd.exe", "/C", CMDCommands});
+			Thread.sleep(100);
+		} catch (IOException | InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		ArrayList<String> lines = new ArrayList<String>();
+		try (BufferedReader br = new BufferedReader(new FileReader("C:/Users/Jasvith/Desktop/Wireshark.txt"))) {
+
+			// Establishment of a String to read line by line in the output text file
+			String sCurrentLine;
+
+			// br.readLine means reading the line given in the text file using the
+			// BufferedReader Variable "br"
+			// Adding the Output line by line to the CMDOutputList
+			while ((sCurrentLine = br.readLine()) != null) {
+				lines.add(sCurrentLine);
+			}
+
+			// To Catch any Error during reading of data
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		String Packets[] = new String[lines.size()];
+		String CMDOutput[] = new String[lines.size()];
+		// Converting "lines" to an Array which can be easily readable - as CMDOutput
+		for (int j = 0; j < lines.size(); j++) {
+			Packets[j] = lines.get(j);
+			CMDOutput[j] = Packets[j];
+		}
+		for(int i=0; i<=10; i++)
+		System.out.println(CMDOutput[i]);
+	}
+
+}

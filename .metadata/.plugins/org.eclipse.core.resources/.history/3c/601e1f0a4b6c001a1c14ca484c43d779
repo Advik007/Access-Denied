@@ -1,0 +1,13 @@
+package Ad;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+ 
+public class OptionPaneExample extends AccessDenied{
+
+public static void main(String[] args) {
+	
+}
+}
+

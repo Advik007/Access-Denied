@@ -1,0 +1,27 @@
+package Ad;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+ 
+public class OptionPaneExample extends AccessDenied{
+JFrame f;
+
+OptionPaneExample(){  
+    f=new JFrame();  
+    JOptionPane.showMessageDialog(f,"A UDP Flood Attack has been detected! The IP Attacker's Address is: ","Alert",JOptionPane.WARNING_MESSAGE);     
+} 
+public static void main(String[] args) {
+	
+	new OptionPaneExample(); 
+	
+	ADTest();
+	AccessDenied sl= new AccessDenied(); 
+	AccessDenied sl2= new AccessDenied();
+
+	if(sl==sl2) {
+		new OptionPaneExample();  
+}
+}
+}
+

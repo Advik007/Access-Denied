@@ -1,0 +1,148 @@
+package Ad;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;  
+
+public class AccessDenied {
+		
+	public static void main(String[] args) {
+		for(int infinite=0;;infinite++) {
+		// TODO Auto-generated method stub
+	
+		//Run the CMD Program to capture 3 Packets at a Time from Wireshark
+		Runtime rt=Runtime.getRuntime();
+		try
+        {  		
+			rt.exec(new String[] {"cmd.exe", "/C", "cd C:\\Program Files\\Wireshark && tshark -i 8 -c 2 > C:\\Users\\Jasvith\\Desktop\\Wireshark.txt"}); 
+        
+        } 
+		
+        catch (Exception e) 
+        { 
+            e.printStackTrace(); 
+        } 
+		String[] data = new String[3];
+		
+		 BufferedReader br = null;
+	        try {
+	        
+	            br = new BufferedReader(new FileReader("C:\\Users\\Jasvith\\Desktop\\Wireshark.txt"));
+	            String line = null;
+	            
+	            int count=0;
+				while ((line  = br.readLine()) != null) {
+	                data[count]= line;
+	                count++;	                
+	            }
+	        
+	        
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        } 
+		if(data[0].contains("UDP")) {
+			//These are a UDP Packet
+			if(data[1].contains("Len=") && data[0].contains("Len=")) {
+				int l1= data[1].length();
+				int l0= data[0].length();
+				char lenb1= data[1].charAt(l1-1);
+				char lenb2= data[1].charAt(l1-2);
+				char lenb3= data[1].charAt(l1-3);
+				String s1= "";
+				s1=s1+lenb3+lenb2+lenb1;
+				
+				char lena1= data[0].charAt(l0-1);
+				char lena2= data[0].charAt(l0-2);
+				char lena3= data[0].charAt(l0-3);
+				String s0= "";
+				s0=s0+lena3+lena2+lena1;
+				
+				if(s0==s1) { char ch; String sl =""; String sl2 ="";
+					ch=data[0].charAt(18);
+					sl=sl+ch;
+					ch=data[0].charAt(19);
+					sl=sl+ch;
+					ch=data[0].charAt(20);
+					sl=sl+ch;
+					ch=data[0].charAt(21);
+					sl=sl+ch;
+					ch=data[0].charAt(22);
+					sl=sl+ch;
+					ch=data[0].charAt(23);
+					sl=sl+ch;
+					ch=data[0].charAt(24);
+					sl=sl+ch;
+					ch=data[0].charAt(25);
+					sl=sl+ch;
+					ch=data[0].charAt(26);
+					sl=sl+ch;
+					ch=data[0].charAt(27);
+					sl=sl+ch;
+					ch=data[0].charAt(28);
+					sl=sl+ch;
+					ch=data[0].charAt(29);
+					sl=sl+ch;
+					ch=data[0].charAt(30);
+					sl=sl+ch;
+					ch=data[0].charAt(31);
+					sl=sl+ch;
+					ch=data[0].charAt(32);
+					sl=sl+ch;
+					ch=data[0].charAt(33);
+					sl=sl+ch;
+					ch=data[0].charAt(34);
+					sl=sl+ch;
+					ch=data[0].charAt(35);
+					sl=sl+ch;
+					
+					
+					ch=data[1].charAt(18);
+					sl2=sl2+ch;
+					ch=data[1].charAt(19);
+					sl2=sl2+ch;
+					ch=data[1].charAt(20);
+					sl2=sl2+ch;
+					ch=data[1].charAt(21);
+					sl2=sl2+ch;
+					ch=data[1].charAt(22);
+					sl2=sl2+ch;
+					ch=data[1].charAt(23);
+					sl2=sl2+ch;
+					ch=data[1].charAt(24);
+					sl2=sl2+ch;
+					ch=data[1].charAt(25);
+					sl2=sl2+ch;
+					ch=data[1].charAt(26);
+					sl2=sl2+ch;
+					ch=data[1].charAt(27);
+					sl2=sl2+ch;
+					ch=data[1].charAt(28);
+					sl2=sl2+ch;
+					ch=data[1].charAt(29);
+					sl2=sl2+ch;
+					ch=data[1].charAt(30);
+					sl2=sl2+ch;
+					ch=data[1].charAt(31);
+					sl2=sl2+ch;
+					ch=data[1].charAt(32);
+					sl2=sl2+ch;
+					ch=data[1].charAt(33);
+					sl2=sl2+ch;
+					ch=data[1].charAt(34);
+					sl2=sl2+ch;
+					ch=data[1].charAt(35);
+					sl2=sl2+ch;
+					
+					if(sl2==sl) {
+						System.out.println("Attack Detected!");
+					}
+				}
+						}
+		}
+		
+}
+}
+}
+		
+	
+
+

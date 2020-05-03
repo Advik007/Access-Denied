@@ -1,0 +1,69 @@
+package Ad;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import  java.util.*;
+public class AccessDenied {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		//Run the CMD Program to capture 3 Packets at a Time from Wireshark
+		Runtime rt=Runtime.getRuntime();
+		try
+        {  		
+			rt.exec(new String[] {"cmd.exe", "/C", "cd C:\\Program Files\\Wireshark && tshark -i 8 -c 2 > C:\\Users\\Jasvith\\Desktop\\Wireshark.txt"}); 
+        
+        } 
+		
+        catch (Exception e) 
+        { 
+            e.printStackTrace(); 
+        } 
+		
+		 BufferedReader br = null;
+	        try {
+	        	for(int j=0; j<=1;j++) {
+	            br = new BufferedReader(new FileReader("C:\\Users\\Jasvith\\Desktop\\Wireshark.txt"));
+	            String line = null;
+				while ((line  = br.readLine()) != null) {
+	                System.out.println(line);
+	            }
+	        
+	        	}
+	            
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        } 
+		/*if(data[1].contains("UDP") && data[0].contains("UDP")) {
+			//These are a UDP Packet
+			if(data[1].contains("Len=") && data[0].contains("Len=")) {
+				int l1= data[1].length();
+				int l0= data[0].length();
+				char lenb1= data[1].charAt(l1-1);
+				char lenb2= data[1].charAt(l1-2);
+				char lenb3= data[1].charAt(l1-3);
+				String s1= "";
+				s1=s1+lenb3+lenb2+lenb1;
+				
+				char lena1= data[1].charAt(l0-1);
+				char lena2= data[1].charAt(l0-2);
+				char lena3= data[1].charAt(l0-3);
+				String s0= "";
+				s0=s0+lena3+lena2+lena1;
+				
+				System.out.println(s0);
+				System.out.println(s1);
+						}*/
+		}
+		
+}
+		
+	
+
+

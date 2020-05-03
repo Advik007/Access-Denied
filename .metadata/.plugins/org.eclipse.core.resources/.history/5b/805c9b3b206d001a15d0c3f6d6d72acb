@@ -1,0 +1,20 @@
+package Ad;
+import java.util.*;
+public class emailtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner S=new Scanner (System.in);
+System.out.println("Enter Name");
+String v= S.next();
+
+System.out.println("Respected Dr. " + v + 
+		"My name is Advik, a 15-year-old, who is currently part of the New York Academy of Sciences' Junior Academy, where young innovators collaborate to solve global issues. I, myself, am currently a member of our ongoing challenge, which is \"Space Colonization on the Moon\". Based on this challenge, my team has progressively developed ideas for this challenge, which we would be happy to share with you! Experimentation and Surveying is one of the key factors for invention and research. \r\n" + 
+		"As a result, our team would like to have an audio call with you for your valuable and esteemed feedback and opinions! If you agree to have a brief meeting with us, we could meet on Sunday, the 22nd of March at 2:00 PM GMT using Skype.\r\n" + 
+		"We hope to hear from you soon and look forward to our future partnership! Our team would love to hear your valued opinions during our project! For more information on our ideas, our team has made a Deliverable for the Junior Academy!\r\n" + 
+		"Looking forward to a swift response from you!\r\n" + 
+		"Yours sincerely,Advik Raj B.Member of The Junior Academy");
+
+	}
+
+}
