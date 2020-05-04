@@ -44,7 +44,7 @@ Here's the things you need to do:
 ### Section 3: Setup of Access Denied
 This video can largely explain the setup of Access Denied from GitHub. 
 
-[YT Link to Setting Up Access Denied](https://youtu.be/dGJcqI41QKU)
+[YT Link to Setting Up Access Denied](https://youtu.be/yO8GK9D3crI)
 
 
 
