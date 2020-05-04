@@ -15,11 +15,12 @@ Using Wireshark's CMD equivalent, tshark, we are able to analyse packets and det
 while countering their effects on IoT Devices and Modems.
 
 Modems essentially run by setting up software on Linux based OSs on PCs.
+## Instructions to Setup
 ### Section 1: Installation of Software for A More Cybersecure Network
 * Installation of BCP38 and BCP84 
   * This is installed on the Linux host-computer which sets up a modem.
 
-## Instructions to Setup
+
   * The functionality of BCP38 and BCP84 is primarily for detecting spoofing of IP Address in Packet Traffic. In computer networking, ingress filtering is a technique used to ensure that incoming packets are actually from the networks from which they claim to originate. This can be used as a countermeasure against various spoofing attacks where the attacker's packets contain fake IP addresses to make it difficult to find the source of the attack. This technique is often used in the denial-of-service attack, and this is a primary target of ingress filtering. This is the main concept through which BCP38 and BCP84 work.
 
 * Installation of Wireshark on your Host PC
