@@ -53,11 +53,12 @@ This video can largely explain the setup of Access Denied from GitHub.
 ## Screenshots - Previews 
 ![Login Screen](https://github.com/Advik007/Access-Denied/blob/master/Screenshot%20(152).png)
 
-![Main GUI](https://github.com/Advik007/Access-Denied/blob/master/Screenshot%20(170).png)
+![Main GUI](https://github.com/Advik007/Access-Denied/blob/master/InkedScreenshot%20(170)_LI.jpg)
 
 ![Alert!](https://github.com/Advik007/Access-Denied/blob/master/Screenshot%20(160).png)
 
 ## Updates
-* 23-03-2019: Basic Setup of Software Completed. Detects UDP, Memcached and Amplification
-* 02-05-2019: Functional and Completed, detects ICMP and ARP Poisoning.
+* 23-03-2020: Basic Setup of Software Completed. Detects UDP, Memcached and Amplification
+* 02-05-2020: Functional and Completed, detects ICMP and ARP Poisoning.
+* 29-08-2020: Added new screenshots of improved software.
  
